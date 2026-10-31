@@ -1,0 +1,236 @@
+.settings-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings-header {
+  margin-bottom: 24px;
+}
+
+.settings-header h1 {
+  margin-bottom: 6px;
+}
+
+.settings-subtitle {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.settings-section {
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.settings-section h3 {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.setting-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 20px;
+  border-bottom: 1px solid rgba(238, 234, 242, 0.6);
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+.setting-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.setting-subtext {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.setting-input {
+  padding: 9px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  background: var(--bg-main);
+  width: 260px;
+  transition: all var(--transition-fast);
+}
+
+.setting-input:focus {
+  outline: none;
+  border-color: var(--lavender);
+  background: var(--bg-white);
+  box-shadow: 0 0 0 3px rgba(169, 149, 214, 0.15);
+}
+
+.setting-select {
+  padding: 9px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  background: var(--bg-main);
+  width: 260px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.setting-select:focus {
+  outline: none;
+  border-color: var(--lavender);
+  box-shadow: 0 0 0 3px rgba(169, 149, 214, 0.15);
+}
+
+/* Level options */
+.level-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.level-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-white);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.level-option:hover {
+  border-color: var(--lavender);
+  transform: translateY(-2px);
+}
+
+.level-option.active {
+  border-color: var(--lavender);
+  background: var(--lavender-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.lo-emoji {
+  font-size: 1.75rem;
+}
+
+.lo-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lo-desc {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Theme Box */
+.theme-info-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.theme-swatches {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: var(--shadow-sm);
+  display: inline-block;
+}
+
+.theme-details strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.theme-details p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Danger zone */
+.settings-danger {
+  border-color: #F9E3E8;
+  background: #FFFDFC;
+}
+
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1.5px solid #F9A8B8;
+  border-radius: var(--radius-md);
+  background: #FFF5F7;
+  color: #C04E64;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-danger:hover {
+  background: #FFE8EC;
+  border-color: #E03554;
+}
+
+@media (max-width: 768px) {
+  .setting-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .setting-input,
+  .setting-select {
+    width: 100%;
+  }
+  .level-options {
+    grid-template-columns: 1fr;
+  }
+  .theme-info-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

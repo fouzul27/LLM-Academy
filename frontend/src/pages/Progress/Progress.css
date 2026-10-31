@@ -1,0 +1,345 @@
+.progress-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.progress-header {
+  margin-bottom: 24px;
+}
+
+.progress-header h1 {
+  margin-bottom: 6px;
+}
+
+.progress-subtitle {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+/* Overview */
+.progress-overview {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.po-circle-card {
+  text-align: center;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.po-circle {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 16px;
+}
+
+.po-ring {
+  width: 100%;
+  height: 100%;
+}
+
+.po-pct {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--lavender);
+}
+
+.po-circle-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.po-circle-card p {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.po-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.po-stat {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: transform var(--transition-normal);
+}
+
+.po-stat:hover {
+  transform: translateY(-2px);
+}
+
+.po-stat.bg-lavender { background: linear-gradient(135deg, #F5F0FF, var(--lavender-light)); }
+.po-stat.bg-mint { background: linear-gradient(135deg, #EEFAF2, var(--mint)); }
+.po-stat.bg-blue { background: linear-gradient(135deg, #EDF5FF, var(--blue)); }
+.po-stat.bg-peach { background: linear-gradient(135deg, #FFF5ED, var(--peach)); }
+.po-stat.bg-pink { background: linear-gradient(135deg, #FFF0F3, var(--pink)); }
+.po-stat.bg-cream { background: linear-gradient(135deg, #FFFCF5, var(--bg-cream)); }
+
+.po-stat-icon {
+  font-size: 1.25rem;
+  margin-bottom: 2px;
+}
+
+.po-stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.po-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Stage track */
+.progress-stage {
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+.stage-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.stage-card-header h3 {
+  font-size: 1.05rem;
+}
+
+.stage-progress-track {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+}
+
+.spt-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  flex: 1;
+  position: relative;
+}
+
+.spt-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-white);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.spt-item.completed .spt-dot {
+  background: var(--mint);
+  border-color: var(--mint-dark);
+  color: #3D8B5E;
+}
+
+.spt-item.current .spt-dot {
+  background: var(--lavender);
+  border-color: var(--lavender);
+  color: white;
+  box-shadow: 0 0 0 4px var(--lavender-light);
+}
+
+.spt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spt-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.spt-desc {
+  font-size: 0.6875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Quizzes table */
+.progress-quizzes {
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+.progress-quizzes h3 {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+
+.pq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pq-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pq-name {
+  width: 180px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.pq-bar {
+  flex: 1;
+  height: 9px;
+  background: var(--lavender-light);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.pq-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+.pq-score {
+  width: 48px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+/* Achievements */
+.progress-achievements {
+  margin-bottom: 24px;
+}
+
+.progress-achievements h3 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.achievement-card {
+  padding: 20px 16px;
+  text-align: center;
+  transition: transform var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievement-card.locked {
+  opacity: 0.45;
+  filter: grayscale(0.8);
+}
+
+.achievement-card.unlocked:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.achievement-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.achievement-card h4 {
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.achievement-card p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.achievement-tag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.achievement-tag.status-unlocked {
+  background: var(--mint);
+  color: #3D8B5E;
+}
+
+.achievement-tag.status-locked {
+  background: var(--border);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .progress-overview {
+    grid-template-columns: 1fr;
+  }
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .po-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stage-progress-track {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .spt-item {
+    flex-direction: row;
+    text-align: left;
+  }
+  .pq-name {
+    width: 120px;
+  }
+}

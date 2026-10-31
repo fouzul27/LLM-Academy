@@ -1,0 +1,110 @@
+# ==============================================================================
+# LLM Academy — Comprehensive Git Ignore Configuration
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Python Virtual Environments
+# ------------------------------------------------------------------------------
+venv/
+.venv/
+*/venv/
+*/.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+backend/venv/
+
+# ------------------------------------------------------------------------------
+# 2. Node.js & Frontend Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+*/node_modules/
+frontend/node_modules/
+.pnp
+.pnp.js
+
+# ------------------------------------------------------------------------------
+# 3. Environment Variables, Secrets & Credentials
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+*.env
+backend/.env
+frontend/.env
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+
+# ------------------------------------------------------------------------------
+# 4. SQLite Databases & Data Storage
+# ------------------------------------------------------------------------------
+backend/data/
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ------------------------------------------------------------------------------
+# 5. Python Bytecode, Caches & Testing
+# ------------------------------------------------------------------------------
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------------------------------------------------------
+# 6. Build Outputs & Bundles
+# ------------------------------------------------------------------------------
+dist/
+dist-ssr/
+frontend/dist/
+*/dist/
+build/
+*/build/
+.vite/
+
+# ------------------------------------------------------------------------------
+# 7. Log Files & Diagnostic Dumps
+# ------------------------------------------------------------------------------
+*.log
+logs/
+*/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 8. OS Metadata & IDE Artifacts
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

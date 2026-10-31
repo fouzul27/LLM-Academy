@@ -1,0 +1,284 @@
+.model-lab-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ml-header {
+  margin-bottom: 20px;
+}
+
+.ml-header h1 { margin-bottom: 6px; }
+.ml-subtitle { font-size: 0.9375rem; }
+
+.ml-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 16px;
+}
+
+/* Nav */
+.ml-nav {
+  padding: 16px;
+  position: sticky;
+  top: calc(var(--header-height) + 28px);
+  max-height: calc(100vh - var(--header-height) - 80px);
+  overflow-y: auto;
+}
+
+.ml-nav-title {
+  font-size: 0.9375rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ml-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  margin-bottom: 2px;
+}
+
+.ml-nav-item:hover { background: var(--lavender-light); color: var(--text-primary); }
+.ml-nav-item.active { background: var(--lavender); color: white; }
+
+.ml-nav-icon { font-size: 0.875rem; }
+.ml-nav-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Section header */
+.ml-section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 16px;
+}
+
+.ml-section-header.bg-mint { background: linear-gradient(135deg, #EEFAF2, var(--mint)); }
+.ml-section-header.bg-lavender { background: linear-gradient(135deg, #F5F0FF, var(--lavender-light)); }
+.ml-section-header.bg-blue { background: linear-gradient(135deg, #EDF5FF, var(--blue)); }
+.ml-section-header.bg-peach { background: linear-gradient(135deg, #FFF5ED, var(--peach)); }
+.ml-section-header.bg-pink { background: linear-gradient(135deg, #FFF0F3, var(--pink)); }
+
+.ml-section-icon { font-size: 2rem; }
+.ml-section-header h2 { margin-bottom: 4px; font-size: 1.25rem; }
+.ml-section-header p { font-size: 0.875rem; color: var(--text-secondary); }
+
+/* Body */
+.ml-section-body {
+  padding: 28px;
+}
+
+.ml-intro {
+  font-size: 0.9375rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+/* Models grid */
+.ml-models-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ml-model-card {
+  padding: 16px;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.ml-model-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.ml-model-card h4 { font-size: 0.9375rem; }
+.ml-model-card p { font-size: 0.8125rem; margin-bottom: 6px; }
+.ml-license { font-size: 0.75rem; color: var(--text-tertiary); }
+
+/* Layers */
+.ml-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ml-layer {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+}
+
+.ml-layer-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--lavender-light);
+  color: var(--lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  flex-shrink: 0;
+}
+
+.ml-layer h4 { font-size: 0.875rem; margin-bottom: 4px; }
+.ml-layer p { font-size: 0.8125rem; }
+
+/* Tables */
+.ml-table-wrap { overflow-x: auto; margin: 16px 0; }
+
+.ml-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.ml-table th {
+  background: var(--lavender-light);
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ml-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.ml-table .mono { font-family: var(--font-mono); font-size: 0.75rem; }
+
+/* Methods, formats, metrics, etc */
+.ml-methods, .ml-formats, .ml-metrics, .ml-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.ml-method-card, .ml-format-card, .ml-metric-card, .ml-option-card {
+  padding: 16px;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.ml-method-card h4, .ml-format-card h4, .ml-metric-card h4, .ml-option-card h4 {
+  font-size: 0.875rem;
+  margin-bottom: 6px;
+}
+
+.ml-method-card p, .ml-format-card p, .ml-metric-card p, .ml-option-card p {
+  font-size: 0.8125rem;
+}
+
+.ml-format-card .code-block {
+  margin-top: 8px;
+  font-size: 0.6875rem;
+  padding: 10px;
+}
+
+.ml-example { margin-top: 16px; }
+
+.ml-tips {
+  margin-top: 16px;
+  padding: 16px 20px;
+  background: var(--bg-cream);
+  border-radius: var(--radius-md);
+}
+
+.ml-tips h4 { margin-bottom: 8px; font-size: 0.875rem; }
+.ml-tips li { font-size: 0.8125rem; margin-bottom: 4px; color: var(--text-secondary); margin-left: 16px; }
+
+/* Steps */
+.ml-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ml-step {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--lavender);
+}
+
+.ml-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--lavender);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  flex-shrink: 0;
+}
+
+.ml-step h4 { font-size: 0.875rem; margin-bottom: 4px; }
+.ml-step p { font-size: 0.8125rem; }
+
+.ml-format-list {
+  margin-top: 16px;
+}
+.ml-format-list h4 { font-size: 0.875rem; margin-bottom: 8px; }
+.ml-format-list li { font-size: 0.8125rem; color: var(--text-secondary); margin-left: 16px; margin-bottom: 4px; }
+
+/* CTA */
+.ml-cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .ml-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .ml-nav {
+    position: static;
+    max-height: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 12px;
+  }
+  
+  .ml-nav-title { width: 100%; }
+  
+  .ml-section-body {
+    padding: 20px;
+  }
+  
+  .ml-cta {
+    flex-direction: column;
+  }
+}
+

@@ -1,0 +1,261 @@
+.roadmap-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.roadmap-intro {
+  margin-bottom: 24px;
+}
+
+.roadmap-intro h1 {
+  margin-bottom: 8px;
+}
+
+.roadmap-intro p {
+  font-size: 0.9375rem;
+}
+
+/* Progress */
+.roadmap-progress {
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+
+.rp-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.rp-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.rp-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--lavender);
+}
+
+.rp-bar {
+  height: 10px;
+}
+
+/* Stages */
+.roadmap-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.stage-card {
+  position: relative;
+  padding: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.stage-connector {
+  position: absolute;
+  left: 35px;
+  bottom: -16px;
+  width: 2px;
+  height: 16px;
+  background: var(--border);
+  z-index: 1;
+}
+
+.stage-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 20px 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  transition: background var(--transition-fast);
+}
+
+.stage-header:hover {
+  background: rgba(169, 149, 214, 0.04);
+}
+
+.stage-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--text-primary);
+}
+
+.stage-number.bg-mint { background: var(--mint); }
+.stage-number.bg-blue { background: var(--blue); }
+.stage-number.bg-lavender { background: var(--lavender-light); }
+.stage-number.bg-peach { background: var(--peach); }
+.stage-number.bg-pink { background: var(--pink); }
+
+.stage-card.completed .stage-number {
+  background: var(--mint);
+  color: #3D8B5E;
+}
+
+.stage-title-area {
+  flex: 1;
+}
+
+.stage-title {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stage-icon {
+  font-size: 1.125rem;
+}
+
+.stage-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.stage-status {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--bg-main);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.stage-chevron {
+  color: var(--text-tertiary);
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.stage-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+/* Expanded content */
+.stage-content {
+  padding: 0 24px 24px;
+  animation: fadeIn 0.3s ease;
+}
+
+.stage-objectives {
+  background: var(--bg-main);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.stage-objectives h4 {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+
+.stage-objectives ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stage-objectives li {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.stage-objectives li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--mint-dark);
+  font-weight: 600;
+}
+
+.stage-topics h4 {
+  font-size: 0.875rem;
+  margin-bottom: 12px;
+}
+
+.topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.topic-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.topic-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.topic-dot.bg-mint { background: var(--mint-dark); }
+.topic-dot.bg-blue { background: var(--blue-dark); }
+.topic-dot.bg-lavender { background: var(--lavender); }
+.topic-dot.bg-peach { background: var(--peach-dark); }
+.topic-dot.bg-pink { background: var(--pink-dark); }
+
+.topic-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: block;
+}
+
+.topic-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.stage-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .stage-header {
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 10px;
+  }
+  
+  .stage-status {
+    order: 4;
+    margin-left: 56px;
+  }
+  
+  .stage-content {
+    padding: 0 16px 16px;
+  }
+  
+  .stage-actions {
+    flex-direction: column;
+  }
+}

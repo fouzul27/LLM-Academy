@@ -1,0 +1,63 @@
+/* ============================================
+   Application Layout
+   ============================================ */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-normal);
+}
+
+.sidebar-collapsed .main-area {
+  margin-left: var(--sidebar-collapsed);
+}
+
+.main-content {
+  flex: 1;
+  padding: 28px 32px;
+  background: var(--bg-main);
+  overflow-y: auto;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main-area {
+    margin-left: 0;
+  }
+  
+  .sidebar-collapsed .main-area {
+    margin-left: 0;
+  }
+  
+  .main-content {
+    padding: 20px 16px;
+  }
+  
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(55, 52, 67, 0.3);
+    z-index: 90;
+    backdrop-filter: blur(2px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    padding: 24px 24px;
+  }
+}
