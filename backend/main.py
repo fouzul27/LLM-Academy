@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, Response, Cookie, Header, Depends, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+import os
 import requests
 import re
 from typing import Optional
@@ -29,8 +30,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-OLLAMA_URL = "http://localhost:11434/api/chat"
-MODEL_NAME = "qwen2.5:1.5b"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/chat")
+MODEL_NAME = os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b")
 
 
 class ChatRequest(BaseModel):
